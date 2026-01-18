@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tashfeen Shafi - Engineering Portfolio</title>
+    <style>
+        /* --- VARIABLES --- */
+        :root {
+            --text-main: #222;
+            --text-muted: #555;
+            --accent: #2563eb; /* Professional Engineering Blue */
+            --bg-color: #fff;
+            --section-gap: 80px;
+        }
+
+        /* --- BASE STYLES --- */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+            color: var(--text-main);
+            line-height: 1.7;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            background-color: var(--bg-color);
+        }
+
+        /* --- HEADER --- */
+        header {
+            border-bottom: 3px solid #eee;
+            padding-bottom: 30px;
+            margin-bottom: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        h1 { margin: 0; font-size: 2.8rem; letter-spacing: -1px; line-height: 1; }
+        .subtitle { font-size: 1.1rem; color: var(--text-muted); margin-top: 5px; font-weight: 500; }
+        
+        .header-actions { text-align: right; }
+        .btn-resume {
+            display: inline-block;
+            background: var(--text-main);
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        .contact-link { display: block; color: var(--accent); text-decoration: none; font-size: 0.9rem; }
+
+        /* --- SECTIONS & TITLES --- */
+        section { margin-bottom: var(--section-gap); }
+        
+        /* The Major Section Title */
+        .section-header {
+            border-left: 5px solid var(--accent);
+            padding-left: 15px;
+            margin-bottom: 30px;
+        }
+        .section-number {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+        h2 { font-size: 1.8rem; margin: 0; line-height: 1.2; }
+
+        h3 { font-size: 1.3rem; margin-top: 0; margin-bottom: 10px; }
+        p { margin-bottom: 20px; color: #333; font-size: 1.05rem; }
+
+        /* --- GRIDS --- */
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin: 30px 0; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin: 30px 0; }
+
+        /* --- IMAGES & CARDS --- */
+        .card {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            padding: 15px;
+            border-radius: 6px;
+        }
+        img { width: 100%; height: auto; display: block; border-radius: 4px; border: 1px solid #eee; }
+        .caption { font-size: 0.85rem; color: #666; margin-top: 10px; line-height: 1.4; }
+        .caption strong { color: #000; }
+
+        /* --- CODE BLOCK --- */
+        .code-block {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 20px;
+            border-radius: 6px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.85rem;
+            overflow-x: auto;
+            border-left: 5px solid var(--accent);
+            margin: 20px 0;
+            white-space: pre; /* Keeps formatting */
+        }
+        .kw { color: #569cd6; } /* Keywords (Blue) */
+        .str { color: #ce9178; } /* Strings (Orange) */
+        .func { color: #dcdcaa; } /* Functions (Yellow) */
+
+        /* --- PRINT SETTINGS --- */
+        @media print {
+            body { padding: 0; max-width: 100%; }
+            .no-print { display: none; }
+            .page-break { page-break-before: always; }
+            a { text-decoration: none; color: #000; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div>
+            <h1>Tashfeen Shafi</h1>
+            <div class="subtitle">Industrial & Systems Engineering Student | 3.82 GPA</div>
+        </div>
+        <div class="header-actions">
+            <a href="resume.pdf" class="btn-resume no-print" download>Download Resume PDF</a>
+            <br>
+            <a href="mailto:shafitashfeen@gmail.com" class="contact-link">shafitashfeen@gmail.com</a>
+        </div>
+    </header>
+
+    <section>
+        <div class="section-header">
+            <span class="section-number">01 // Engineering Research</span>
+            <h2>Tripedal Locomotion: The Iteration Process</h2>
+        </div>
+
+        <p>
+            Most walking robots are over-engineered. They tend to use a multitude of motors, increasing the weight and cost significantly. My research group at KSU wanted to strip that complexity away. We aimed to build a "tripedal" robot that mimics crutch-assisted walking—using geometry to cut costs while creating a reliable base for everyday robotics.
+        </p>
+        <p>
+            To get to a working model, we had to work through many iterations. Using CAD, we came up with basic designs and discussed the benefits and drawbacks of each to land on the one we ultimately built.
+        </p>
+
+        <div class="grid-3">
+            <div>
+                <img src="cad-v1.jpg" alt="My Concept">
+                <div class="caption">
+                    <strong>Concept A (My Pitch)</strong><br>
+                    I pushed for a single-plane linkage. It addressed most of our issues; however, it was somewhat unstable. If the robot was nudged, a force from the front or back would have caused it to tip over.
+                </div>
+            </div>
+            <div>
+                <img src="cad-v2.jpg" alt="Teammate 1 Concept">
+                <div class="caption">
+                    <strong>Concept B (Teammate)</strong><br>
+                    A cool concept proposed by one of my teammates. However, the "knee" joint was far too complex for our manufacturing goals.
+                </div>
+            </div>
+            <div>
+                <img src="cad-final.jpg" alt="Final Design">
+                <div class="caption">
+                    <strong>Final Selection</strong><br>
+                    We compromised. We adopted a hybrid design that offered the best stability without adding unnecessary complexity.
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <div>
+                <h3>The Build Phase</h3>
+                <p>
+                    Once the CAD was locked in, I moved to fabrication. For this phase, we used VEX Aluminum structures and motors; this reduced the amount of time we waited around for parts to print while simultaneously being much stronger. After this, the plan is to work on making a version that ditches the bulky VEX components for something smaller and lighter.
+                    <br><br>
+                    Right now, I'm working on the software. The goal is for this robot to be able to climb stairs, traverse obstacles, and much more, all while making the physical design simpler and cheaper to manufacture.
+                </p>
+            </div>
+            <div>
+                <img src="robot-main.jpg" alt="Physical Robot">
+                <div class="caption">The current physical prototype in the KSU Robotics Lab.</div>
+            </div>
+        </div>
+    </section>
+
+    <div class="page-break"></div>
+
+    <section>
+        <div class="section-header">
+            <span class="section-number">02 // Manufacturing Systems</span>
+            <h2>Hands-On Fabrication</h2>
+        </div>
+
+        <div class="grid-2">
+            <div>
+                <h3>Formula SAE (Suspension Team)</h3>
+                <p>
+                    I'm currently a member of the suspension sub-team for KSU Motorsports. My main role right now is the teardown of the 2025 chassis. While taking apart the vehicle, we are looking at issues and solutions we can implement. For example, the floor pan is currently sticking out even though based off the CAD model, everything should align perfectly.
+                </p>
+                <p>
+                    I also help with car testing and material prep for the next build. I'm also learning things like welding so hopefully, I am the one making next year's car as well.
+                </p>
+                <img src="fsae.jpg" alt="FSAE Car" style="margin-top: 15px;">
+            </div>
+            
+            <div>
+                <h3>The "Mechanic's Eye"</h3>
+                <p>
+                    Although I have a decent bit of lab experience, I enjoy working hands-on the most. I was in my high school automotive program for 3 years and also earned my <strong>ASE Entry-Level Engine Repair</strong> certification. Putting yourself in a position where you are the end consumer allows you to identify issues before production. 
+                </p>
+                <p>
+                    This applies to almost everything. For example, when I started learning how to code, I would often have one of my friends test it, and they would do things I would never consider. It's almost like you're blind to certain issues while creating it; our minds skip out on the flaws because we know how the task <em>should</em> be done. Now, when I model something, I'm already thinking about serviceability and what mistakes a user might make.
+                </p>
+                <img src="ase-logo.jpg" alt="ASE Logo" style="margin-top: 15px;">
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="section-header">
+            <span class="section-number">03 // Process Automation</span>
+            <h2>Solving Workflow Bottlenecks</h2>
+        </div>
+        
+        <p>
+            I run a photography business on the side, and I hit a major wall: merging HDR photos. Aligning and merging brackets manually took about 5 minutes per set. When you have 500 photos, manually doing all of that is a waste of time.
+        </p>
+        <p>
+            So, I engineered a Python script to do the boring stuff for me. It interacts with the Hugin engine to sort, align, and merge the files automatically, so I can work on something else while this task completes itself.
+        </p>
+
+        <div class="code-block">
+<span class="kw">import</span> os
+<span class="kw">import</span> subprocess
+<span class="kw">import</span> glob
+<span class="kw">import</span> shutil
+
+<span class="kw">def</span> <span class="func">find_hugin_tools</span>():
+    align_name = <span class="str">"align_image_stack.exe"</span>
+    enfuse_name = <span class="str">"enfuse.exe"</span>
+    search_paths = [os.getcwd(), <span class="str">r"C:\Program Files\Hugin\bin"</span>]
+    
+    found_align = <span class="kw">None</span>
+    found_enfuse = <span class="kw">None</span>
+
+    <span class="kw">if</span> shutil.which(<span class="str">"align_image_stack"</span>): found_align = <span class="str">"align_image_stack"</span>
+    <span class="kw">if</span> shutil.which(<span class="str">"enfuse"</span>): found_enfuse = <span class="str">"enfuse"</span>
+
+    <span class="kw">return</span> found_align, found_enfuse
+
+<span class="kw">def</span> <span class="func">group_by_count</span>(folder_path):
+    files = []
+    <span class="kw">for</span> ext <span class="kw">in</span> [<span class="str">'*.tif'</span>, <span class="str">'*.jpg'</span>]:
+        files.extend(glob.glob(os.path.join(folder_path, ext)))
+    
+    files.sort() 
+    groups = []
+    
+    <span class="kw">for</span> i <span class="kw">in</span> range(0, len(files), 5):
+        chunk = files[i:i + 5]
+        <span class="kw">if</span> len(chunk) == 5:
+            groups.append(chunk)
+            
+    <span class="kw">return</span> groups
+
+<span class="kw">def</span> <span class="func">process_groups</span>(groups, output_folder, align_tool, enfuse_tool):
+    <span class="kw">if</span> <span class="kw">not</span> os.path.exists(output_folder):
+        os.makedirs(output_folder)
+
+    <span class="kw">for</span> index, group <span class="kw">in</span> enumerate(groups):
+        <span class="kw">print</span>(<span class="str">f"Processing Set {index + 1}..."</span>)
+        
+        base_name = os.path.splitext(os.path.basename(group[0]))[0]
+        output_filename = os.path.join(output_folder, <span class="str">f"{base_name}_fused.tif"</span>)
+        aligned_prefix = os.path.join(output_folder, <span class="str">"temp_aligned_"</span>)
+        
+        <span class="kw">try</span>:
+            <span class="kw">print</span>(<span class="str">" > Aligning..."</span>)
+            subprocess.run([align_tool, <span class="str">"-m"</span>, <span class="str">"-a"</span>, aligned_prefix] + group)
+
+            aligned_files = glob.glob(aligned_prefix + <span class="str">"*.tif"</span>)
+            
+            <span class="kw">print</span>(<span class="str">" > Blending..."</span>)
+            cmd = [
+                enfuse_tool,
+                <span class="str">"--output"</span>, output_filename,
+                <span class="str">"--exposure-weight=1.0"</span>,
+                <span class="str">"--saturation-weight=0.2"</span>,
+                <span class="str">"--contrast-weight=0"</span>
+            ] + aligned_files
+            
+            subprocess.run(cmd)
+
+            <span class="kw">for</span> f <span class="kw">in</span> aligned_files:
+                os.remove(f)
+
+        <span class="kw">except</span> Exception <span class="kw">as</span> e:
+            <span class="kw">print</span>(<span class="str">f" ! Error: {e}"</span>)
+
+<span class="kw">if</span> __name__ == <span class="str">"__main__"</span>:
+    current_folder = os.getcwd()
+    output_dir = os.path.join(current_folder, <span class="str">"Enfused_Output"</span>)
+    
+    align_tool, enfuse_tool = find_hugin_tools()
+    
+    <span class="kw">if</span> align_tool <span class="kw">and</span> enfuse_tool:
+        bracket_groups = group_by_count(current_folder)
+        process_groups(bracket_groups, output_dir, align_tool, enfuse_tool)</div>
+
+        <h3 style="margin-top: 60px; border-top: 1px solid #eee; padding-top: 30px;">Legacy Competitions</h3>
+        <p>Before college, I spent years competing in technical events. This is where I learned to prototype fast and fail faster.</p>
+
+        <div class="grid-2">
+            <div class="card">
+                <h3>SkillsUSA Robotics</h3>
+                <p style="font-size: 0.95rem;">
+                    I competed in the Robotics & Autonomous Technology division. At the state level, we had to showcase our knowledge of robotics via testing. If they found us to be good, we would move onto actually making a robot under a set amount of time in nationals. We took home the <strong>State Gold Medal</strong> two years in a row (2024 & 2025).
+                </p>
+                <img src="medals.jpg" alt="SkillsUSA Medals" style="margin-top: 10px;">
+            </div>
+
+            <div class="card">
+                <h3>Glucose Fuel Cell</h3>
+                <p style="font-size: 0.95rem;">
+                    In high school, I was really interested in alternative clean energy, so I made a glucose fuel cell which took a glucose and water solution and oxidized it using potassium hydroxide. I faced many limitations; however, this setup still generated a measurable current, although it would struggle to light an LED. In the future, I hope to improve this so it can charge a battery.
+                </p>
+                <img src="fuel-cell.jpg" alt="Fuel Cell Prototype" style="margin-top: 10px;">
+            </div>
+        </div>
+    </section>
+
+    <div style="text-align: center; margin-top: 80px; color: #999; font-size: 0.85rem; border-top: 1px solid #eee; padding-top: 20px;">
+        <p>&copy; 2026 Tashfeen Shafi. All rights reserved. | 404-933-6201 | shafitashfeen@gmail.com</p>
+    </div>
+
+</body>
+</html>

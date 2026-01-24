@@ -105,6 +105,7 @@
         .kw { color: #569cd6; } /* Keywords (Blue) */
         .str { color: #ce9178; } /* Strings (Orange) */
         .func { color: #dcdcaa; } /* Functions (Yellow) */
+        .comment { color: #6a9955; font-style: italic; } /* Comments (Green) */
 
         /* --- PRINT SETTINGS --- */
         @media print {
@@ -132,14 +133,14 @@
     <section>
         <div class="section-header">
             <span class="section-number">01 // Engineering Research</span>
-            <h2>Tripedal Locomotion: The Iteration Process</h2>
+            <h2>Tripedal Locomotion: Design Iteration</h2>
         </div>
 
         <p>
-            Most walking robots are over-engineered. They tend to use a multitude of motors, increasing the weight and cost significantly. My research group at KSU wanted to strip that complexity away. We aimed to build a "tripedal" robot that mimics crutch-assisted walking—using geometry to cut costs while creating a reliable base for everyday robotics.
+            Most walking robots are over-engineered. They use too many motors, which drives up weight and cost. My research group at KSU wanted to strip that complexity away. Our goal is to build a "tripedal" robot that uses crutch-assisted walking geometry, basically using math instead of motors, to create a cheaper base for robotics.
         </p>
         <p>
-            To get to a working model, we had to work through many iterations. Using CAD, we came up with basic designs and discussed the benefits and drawbacks of each to land on the one we ultimately built.
+            To get it working, we had to iterate. We ran through several CAD concepts, discussing the pros and cons of each before cutting any metal.
         </p>
 
         <div class="grid-3">
@@ -147,21 +148,21 @@
                 <img src="cad-v1.jpg" alt="My Concept">
                 <div class="caption">
                     <strong>Concept A (My Pitch)</strong><br>
-                    I pushed for a single-plane linkage. It addressed most of our issues; however, it was somewhat unstable. If the robot was nudged, a force from the front or back would have caused it to tip over.
+                    I wanted to minimize the part count to keep it light. It solved the weight issue, but simulations showed it was unstable. A nudge from the front or back would tip it over. We decided not to move forward with this one.
                 </div>
             </div>
             <div>
                 <img src="cad-v2.jpg" alt="Teammate 1 Concept">
                 <div class="caption">
                     <strong>Concept B (Teammate)</strong><br>
-                    A cool concept proposed by one of my teammates. However, the "knee" joint was far too complex for our manufacturing goals.
+                    Proposed by a teammate to improve the range of motion. It was a solid concept, but the "knee" joint required manufacturing precision that was just too complex for our budget and timeline.
                 </div>
             </div>
             <div>
                 <img src="cad-final.jpg" alt="Final Design">
                 <div class="caption">
-                    <strong>Final Selection</strong><br>
-                    We compromised. We adopted a hybrid design that offered the best stability without adding unnecessary complexity.
+                    <strong>Final Selection (Hybrid)</strong><br>
+                    We compromised. We built a hybrid design that fixed the stability issues of my concept without adding the extra complexity of Concept B.
                 </div>
             </div>
         </div>
@@ -170,14 +171,14 @@
             <div>
                 <h3>The Build Phase</h3>
                 <p>
-                    Once the CAD was locked in, I moved to fabrication. For this phase, we used VEX Aluminum structures and motors; this reduced the amount of time we waited around for parts to print while simultaneously being much stronger. After this, the plan is to work on making a version that ditches the bulky VEX components for something smaller and lighter.
+                    With the CAD locked in, we moved to fabrication. We used standard <strong>COTS (Commercial Off-The-Shelf) aluminum framing</strong> for the build. It wasn't fancy, but it allowed us to test the design immediately without waiting weeks for custom parts.
                     <br><br>
-                    Right now, I'm working on the software. The goal is for this robot to be able to climb stairs, traverse obstacles, and much more, all while making the physical design simpler and cheaper to manufacture.
+                    Right now, I’m working on the control software. The goal is to get this robot climbing stairs and handling obstacles, proving that you don't need expensive hardware to move effectively.
                 </p>
             </div>
             <div>
                 <img src="robot-main.jpg" alt="Physical Robot">
-                <div class="caption">The current physical prototype in the KSU Robotics Lab.</div>
+                <div class="caption">Current physical prototype undergoing testing in the KSU Robotics Lab.</div>
             </div>
         </div>
     </section>
@@ -194,10 +195,10 @@
             <div>
                 <h3>Formula SAE (Suspension Team)</h3>
                 <p>
-                    I'm currently a member of the suspension sub-team for KSU Motorsports. My main role right now is the teardown of the 2025 chassis. While taking apart the vehicle, we are looking at issues and solutions we can implement. For example, the floor pan is currently sticking out even though based off the CAD model, everything should align perfectly.
+                    I’m currently on the suspension sub-team for KSU Motorsports. My main job right now is tearing down the 2025 chassis and identifying things that don't match the CAD model - like a floor pan misalignment we found recently.
                 </p>
                 <p>
-                    I also help with car testing and material prep for the next build. I'm also learning things like welding so hopefully, I am the one making next year's car as well.
+                    I am actively participating in car testing, team meetings, and software sessions to learn how the other systems work. My goal is to gain as much experience as I can now so I can play a bigger role in the manufacturing cycle next semester.
                 </p>
                 <img src="fsae.jpg" alt="FSAE Car" style="margin-top: 15px;">
             </div>
@@ -205,10 +206,10 @@
             <div>
                 <h3>The "Mechanic's Eye"</h3>
                 <p>
-                    Although I have a decent bit of lab experience, I enjoy working hands-on the most. I was in my high school automotive program for 3 years and also earned my <strong>ASE Entry-Level Engine Repair</strong> certification. Putting yourself in a position where you are the end consumer allows you to identify issues before production. 
+                    I approach design with a mechanic's mindset. I have my <strong>ASE Engine Repair Certification</strong>, but my experience goes beyond the test. I’ve done everything from basic brake jobs and wheel balancing to welding rust patches and assisting with engine swaps.
                 </p>
                 <p>
-                    This applies to almost everything. For example, when I started learning how to code, I would often have one of my friends test it, and they would do things I would never consider. It's almost like you're blind to certain issues while creating it; our minds skip out on the flaws because we know how the task <em>should</em> be done. Now, when I model something, I'm already thinking about serviceability and what mistakes a user might make.
+                    I've worked on cars that were a nightmare to fix because of poor design choices. That experience sticks with me. When I model a part now, I try to make sure it's something a mechanic can actually work on, rather than just something that looks good in CAD.
                 </p>
                 <img src="ase-logo.jpg" alt="ASE Logo" style="margin-top: 15px;">
             </div>
@@ -218,110 +219,60 @@
     <section>
         <div class="section-header">
             <span class="section-number">03 // Process Automation</span>
-            <h2>Solving Workflow Bottlenecks</h2>
+            <h2>Workflow Optimization</h2>
         </div>
         
         <p>
-            I run a photography business on the side, and I hit a major wall: merging HDR photos. Aligning and merging brackets manually took about 5 minutes per set. When you have 500 photos, manually doing all of that is a waste of time.
+            Running a photography business introduced me to a major bottleneck: merging HDR photos. Aligning and merging brackets by hand took me about 5 minutes per set. When I had a batch of 500 photos, that manual work was a massive waste of time.
         </p>
         <p>
-            So, I engineered a Python script to do the boring stuff for me. It interacts with the Hugin engine to sort, align, and merge the files automatically, so I can work on something else while this task completes itself.
+            I wrote a Python script to handle the repetitive tasks. It hooks into the Hugin engine to automatically sort, align, and fuse the images. It cuts my active work time by about <strong>40%</strong> and lets me focus on other things while it runs.
         </p>
 
         <div class="code-block">
-<span class="kw">import</span> os
-<span class="kw">import</span> subprocess
-<span class="kw">import</span> glob
-<span class="kw">import</span> shutil
-
-<span class="kw">def</span> <span class="func">find_hugin_tools</span>():
-    align_name = <span class="str">"align_image_stack.exe"</span>
-    enfuse_name = <span class="str">"enfuse.exe"</span>
-    search_paths = [os.getcwd(), <span class="str">r"C:\Program Files\Hugin\bin"</span>]
-    
-    found_align = <span class="kw">None</span>
-    found_enfuse = <span class="kw">None</span>
-
-    <span class="kw">if</span> shutil.which(<span class="str">"align_image_stack"</span>): found_align = <span class="str">"align_image_stack"</span>
-    <span class="kw">if</span> shutil.which(<span class="str">"enfuse"</span>): found_enfuse = <span class="str">"enfuse"</span>
-
-    <span class="kw">return</span> found_align, found_enfuse
-
-<span class="kw">def</span> <span class="func">group_by_count</span>(folder_path):
-    files = []
-    <span class="kw">for</span> ext <span class="kw">in</span> [<span class="str">'*.tif'</span>, <span class="str">'*.jpg'</span>]:
-        files.extend(glob.glob(os.path.join(folder_path, ext)))
-    
-    files.sort() 
-    groups = []
-    
-    <span class="kw">for</span> i <span class="kw">in</span> range(0, len(files), 5):
-        chunk = files[i:i + 5]
-        <span class="kw">if</span> len(chunk) == 5:
-            groups.append(chunk)
-            
-    <span class="kw">return</span> groups
-
+<span class="comment"># Core logic for batch processing HDR groups</span>
 <span class="kw">def</span> <span class="func">process_groups</span>(groups, output_folder, align_tool, enfuse_tool):
-    <span class="kw">if</span> <span class="kw">not</span> os.path.exists(output_folder):
-        os.makedirs(output_folder)
+    <span class="kw">if</span> <span class="kw">not</span> os.path.exists(output_folder): os.makedirs(output_folder)
 
-    <span class="kw">for</span> index, group <span class="kw">in</span> enumerate(groups):
-        <span class="kw">print</span>(<span class="str">f"Processing Set {index + 1}..."</span>)
-        
+    <span class="kw">for</span> group <span class="kw">in</span> groups:
+        <span class="comment"># 1. Setup paths</span>
         base_name = os.path.splitext(os.path.basename(group[0]))[0]
-        output_filename = os.path.join(output_folder, <span class="str">f"{base_name}_fused.tif"</span>)
+        output_file = os.path.join(output_folder, <span class="str">f"{base_name}_fused.tif"</span>)
         aligned_prefix = os.path.join(output_folder, <span class="str">"temp_aligned_"</span>)
         
-        <span class="kw">try</span>:
-            <span class="kw">print</span>(<span class="str">" > Aligning..."</span>)
-            subprocess.run([align_tool, <span class="str">"-m"</span>, <span class="str">"-a"</span>, aligned_prefix] + group)
+        <span class="comment"># 2. Align images using Hugin toolstack</span>
+        subprocess.run([align_tool, <span class="str">"-m"</span>, <span class="str">"-a"</span>, aligned_prefix] + group)
+        aligned_files = glob.glob(aligned_prefix + <span class="str">"*.tif"</span>)
+        
+        <span class="comment"># 3. Fuse aligned images into final HDR output</span>
+        cmd = [
+            enfuse_tool, <span class="str">"--output"</span>, output_file,
+            <span class="str">"--exposure-weight=1.0"</span>, <span class="str">"--saturation-weight=0.2"</span>, <span class="str">"--contrast-weight=0"</span>
+        ] + aligned_files
+        subprocess.run(cmd)
 
-            aligned_files = glob.glob(aligned_prefix + <span class="str">"*.tif"</span>)
-            
-            <span class="kw">print</span>(<span class="str">" > Blending..."</span>)
-            cmd = [
-                enfuse_tool,
-                <span class="str">"--output"</span>, output_filename,
-                <span class="str">"--exposure-weight=1.0"</span>,
-                <span class="str">"--saturation-weight=0.2"</span>,
-                <span class="str">"--contrast-weight=0"</span>
-            ] + aligned_files
-            
-            subprocess.run(cmd)
+        <span class="comment"># 4. Cleanup temp files</span>
+        <span class="kw">for</span> f <span class="kw">in</span> aligned_files: os.remove(f)</div>
+        <p class="caption" style="font-family: monospace; color: #777;">(Note: This is an abbreviated snippet to show the logic. The actual script includes full error handling and file management.)</p>
 
-            <span class="kw">for</span> f <span class="kw">in</span> aligned_files:
-                os.remove(f)
-
-        <span class="kw">except</span> Exception <span class="kw">as</span> e:
-            <span class="kw">print</span>(<span class="str">f" ! Error: {e}"</span>)
-
-<span class="kw">if</span> __name__ == <span class="str">"__main__"</span>:
-    current_folder = os.getcwd()
-    output_dir = os.path.join(current_folder, <span class="str">"Enfused_Output"</span>)
-    
-    align_tool, enfuse_tool = find_hugin_tools()
-    
-    <span class="kw">if</span> align_tool <span class="kw">and</span> enfuse_tool:
-        bracket_groups = group_by_count(current_folder)
-        process_groups(bracket_groups, output_dir, align_tool, enfuse_tool)</div>
-
-        <h3 style="margin-top: 60px; border-top: 1px solid #eee; padding-top: 30px;">Legacy Competitions</h3>
-        <p>Before college, I spent years competing in technical events. This is where I learned to prototype fast and fail faster.</p>
+        <h3 style="margin-top: 60px; border-top: 1px solid #eee; padding-top: 30px;">Early Technical Experience</h3>
+        <p>Before starting at KSU, I competed in technical events where I learned to prototype fast and handle failure.</p>
 
         <div class="grid-2">
             <div class="card">
                 <h3>SkillsUSA Robotics</h3>
                 <p style="font-size: 0.95rem;">
-                    I competed in the Robotics & Autonomous Technology division. At the state level, we had to showcase our knowledge of robotics via testing. If they found us to be good, we would move onto actually making a robot under a set amount of time in nationals. We took home the <strong>State Gold Medal</strong> two years in a row (2024 & 2025).
+                    I competed in the Robotics & Autonomous Technology division. We had to pass a theory test just to qualify, then build and program a robot under strict time limits at Nationals. We took home the <strong>State Gold Medal</strong> two years in a row (2024 & 2025).
                 </p>
                 <img src="medals.jpg" alt="SkillsUSA Medals" style="margin-top: 10px;">
             </div>
 
             <div class="card">
-                <h3>Glucose Fuel Cell</h3>
+                <h3>Glucose Fuel Cell Research</h3>
                 <p style="font-size: 0.95rem;">
-                    In high school, I was really interested in alternative clean energy, so I made a glucose fuel cell which took a glucose and water solution and oxidized it using potassium hydroxide. I faced many limitations; however, this setup still generated a measurable current, although it would struggle to light an LED. In the future, I hope to improve this so it can charge a battery.
+                    I built a galvanic cell to generate electricity from a glucose solution. It worked, but the current was low. I found that the standard membrane I used was too permeable, which allowed the reactants to mix.
+                    <br><br>
+                    I plan to keep working on this in the future. One improvement I am considering is using a <strong>Nafion membrane</strong> to fix the permeability issue and increase efficiency.
                 </p>
                 <img src="fuel-cell.jpg" alt="Fuel Cell Prototype" style="margin-top: 10px;">
             </div>
